@@ -11,6 +11,28 @@ region merujuk pada lokasi geografis pusat data (data center) tempat database Po
 ## Jawaban soal No. 3
 npm run seed digunakan untuk mengisi database dengan data awal (seed data). Ini bermanfaat untuk memasukkan data dummy atau data dasar yang dibutuhkan oleh aplikasi saat tahap pengembangan atau pengujian. Pada seed.js, kita membuat table users, customers, invoices, dan revenue. Kemudian Data.js adalah file dimana kita membuat contoh data yang akan kita masukkan ke dalam tabel yang telah kita buat.
 
+## Jawaban No 4
+Saya mempelajari bagaimana menggunakan query untuk mengelola/menyeleksi data melalui vercel postgree.
+** Untuk query yang saya coba
+SELECT
+    r.month AS revenue_month,
+    r.revenue AS recorded_revenue,
+    COALESCE(SUM(i.amount), 0) AS calculated_revenue_from_invoices
+FROM
+    revenue r
+LEFT JOIN
+    invoices i ON TO_CHAR(i.date, 'Mon') = r.month AND i.status = 'paid'
+GROUP BY
+    r.month, r.revenue
+ORDER BY
+    r.month;
+    ** PENJELASAN :
+      a) TO_CHAR(i.date, 'Mon') = r.month: Mengonversi tanggal di invoices menjadi format bulan (seperti Jan, Feb, dll.) agar bisa dibandingkan dengan kolom month di tabel revenue.
+      b) i.status = 'paid': Menyaring hanya invoice yang sudah dibayar (status = 'paid') untuk menghitung pendapatan.
+      c) SUM(i.amount): Menghitung total pendapatan dari invoices yang sudah dibayar untuk setiap bulan.
+      d) COALESCE(SUM(i.amount), 0): Mengembalikan 0 jika tidak ada invoice yang cocok di bulan tertentu, sehingga hasil tidak menjadi NULL.
+      e) LEFT JOIN: Menggunakan LEFT JOIN untuk memastikan semua bulan dari revenue ditampilkan, meskipun tidak ada data di invoices untuk bulan tersebut.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
