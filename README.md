@@ -1,3 +1,9 @@
+## Jawaban soal No 1
+Vercel adalah platform hosting dan deployment yang dirancang untuk aplikasi front-end, seperti proyek berbasis framework Next.js, React, Vue.js, dan Svelte. Vercel mempermudah proses deployment (penyebaran) aplikasi web dengan fitur continuous deployment, yang memungkinkan pembaruan otomatis dari perubahan di repository GitHub atau GitLab. Vercel juga menyediakan infrastruktur serverless, yang mendukung kinerja cepat dan skalabilitas tinggi.
+
+
+Deploy adalah proses menyebarkan atau memindahkan aplikasi dari lingkungan pengembangan (lokal) ke server atau platform hosting, sehingga aplikasi tersebut bisa diakses secara publik melalui internet. Melalui deployment, aplikasi siap digunakan oleh pengguna, lengkap dengan konfigurasi yang diperlukan untuk berjalan dengan baik di lingkungan produksi.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
