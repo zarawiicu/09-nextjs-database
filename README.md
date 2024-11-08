@@ -8,6 +8,9 @@ Saya membelajari bagaimana cara membuat database melalui vercel postgree, konfig
 
 region merujuk pada lokasi geografis pusat data (data center) tempat database PostgreSQL kamu ditempatkan. Saat kamu membuat database PostgreSQL di Vercel, kamu bisa memilih region tertentu, seperti us-east-1, eu-west-1, dan lainnya. Ini menentukan di mana data kamu akan disimpan secara fisik.
 
+## Jawaban soal No. 3
+npm run seed digunakan untuk mengisi database dengan data awal (seed data). Ini bermanfaat untuk memasukkan data dummy atau data dasar yang dibutuhkan oleh aplikasi saat tahap pengembangan atau pengujian. Pada seed.js, kita membuat table users, customers, invoices, dan revenue. Kemudian Data.js adalah file dimana kita membuat contoh data yang akan kita masukkan ke dalam tabel yang telah kita buat.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
